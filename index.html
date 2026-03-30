@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeetCode - A Better Way to Prepare for Coding Interviews</title>
+    <meta name="description"
+        content="Tech interview roadmaps trusted by engineers at Google, Meta, OpenAI, and other top tech companies.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="https://neetcode.io/favicon.ico">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#6366f1" />
+                            <stop offset="100%" stop-color="#a855f7" />
+                        </linearGradient>
+                    </defs>
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="none"
+                        fill="url(#logoGradient)" />
+                </svg>
+                NeetCode
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="#">Courses</a></li>
+                <li><a href="#">Practice</a></li>
+                <li><a href="#">Roadmap</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button id="theme-toggle" class="btn-icon" aria-label="Toggle theme">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="3"></circle>
+                        <path
+                            d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+                        </path>
+                    </svg>
+                </button>
+                <a href="#" class="btn btn-secondary">Sign In</a>
+                <a href="#" class="btn btn-pro">Pro</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content animate-on-scroll">
+                <h1 class="hero-title">
+                    Master interviews, <br>
+                    <span class="text-gradient">get your dream job.</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Tech interview roadmaps trusted by engineers at Google, Meta, OpenAI, and other top tech companies.
+                </p>
+                <div class="hero-cta">
+                    <a href="#" class="btn btn-primary">Get Pro<svg width="20" height="20" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg></a>
+                    <a href="#" class="btn btn-secondary">Explore Courses</a>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-value">1M+</span>
+                        <span class="stat-label">Engineers prepared</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value">1000+</span>
+                        <span class="stat-label">Practice problems & Video Explanations</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-visual animate-on-scroll delay-200">
+                <div class="code-window">
+                    <div class="code-header">
+                        <div class="file-name">two_sum.py</div>
+                    </div>
+                    <div class="code-content">
+                        <pre><code><span class="token keyword">class</span> <span class="token function">Solution</span>:
+    <span class="token keyword">def</span> <span class="token function">twoSum</span>(self, nums: List[<span class="token function">int</span>], target: <span class="token function">int</span>) -> List[<span class="token function">int</span>]:
+        <span class="token comment"># Store values we've seen: val -> index</span>
+        prevMap <span class="token operator">=</span> {}
+        
+        <span class="token keyword">for</span> i, n <span class="token keyword">in</span> <span class="token function">enumerate</span>(nums):
+            diff <span class="token operator">=</span> target <span class="token operator">-</span> n
+            <span class="token keyword">if</span> diff <span class="token keyword">in</span> prevMap:
+                <span class="token keyword">return</span> [prevMap[diff], i]
+            
+            <span class="token comment"># Add to map and continue</span>
+            prevMap[n] <span class="token operator">=</span> i
+            
+        <span class="token keyword">return</span> []</code></pre>
+                    </div>
+                </div>
+
+                <!-- Floating Elements representing features -->
+                <div class="floating-element floating-1">
+                    <div class="solved-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                    </div>
+                    <div class="floating-text">
+                        <h4>Accepted</h4>
+                        <p>Runtime: 56 ms • Top 92%</p>
+                    </div>
+                </div>
+
+                <div class="floating-element floating-2">
+                    <div class="solved-icon" style="background: rgba(168, 85, 247, 0.1); color: #c084fc;">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                        </svg>
+                    </div>
+                    <div class="floating-text">
+                        <h4>Video Solution</h4>
+                        <p>Detailed explanation inside</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trusted By -->
+    <section class="companies">
+        <div class="container">
+            <h3 class="companies-text">Our learners get hired at</h3>
+            <div class="companies-logo-grid">
+                <!-- Using simple SVG paths for mockup company logos -->
+                <img class="company-logo" src="images/Google.png" alt="Google">
+                <img class="company-logo" src="images/Meta.png" alt="Meta">
+                <img class="company-logo" src="images/OpenAi.png" alt="OpenAI">
+                <img class="company-logo" src="images/amazon.png" alt="Amazon">
+                <img class="company-logo" src="images/Netflix.png" alt="Netflix">
+                <img class="company-logo" src="images/anthropic.svg" alt="Anthropic">
+                <img class="company-logo" src="images/Microsoft.png" alt="Microsoft">
+            </div>
+        </div>
+    </section>
+
+    <!-- Practice Section -->
+    <section class="practice-section">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-badge">Master Interviews</span>
+                <h2 class="section-title">The Ultimate <span class="text-gradient-alt">Roadmap</span></h2>
+                <p class="section-subtitle">We categorize problems strictly by pattern so you don't waste time solving
+                    the same concepts over and over again.</p>
+            </div>
+
+            <div class="roadmap-grid">
+
+                <a href="#" class="roadmap-card animate-on-scroll">
+                    <div class="card-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                            </path>
+                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                            <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                        </svg>
+                    </div>
+                    <h3>NeetCode 150</h3>
+                    <p>The core algorithm patterns required to pass any technical interview.</p>
+
+                    <div class="progress-wrap">
+                        <div class="progress-container">
+                            <div class="progress-bar bg-purple progress-animate" data-width="0%"></div>
+                        </div>
+                        <div class="progress-stats">
+                            <span>Not Started</span>
+                            <span>0 / 150</span>
+                        </div>
+                    </div>
+
+                    <div class="card-action">
+                        Continue Practice <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.5">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </div>
+                </a>
+
+                <a href="#" class="roadmap-card animate-on-scroll delay-100">
+                    <div class="card-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                        </svg>
+                    </div>
+                    <h3>Blind 75</h3>
+                    <p>The famous curated list of top 75 generic programming interview questions.</p>
+
+                    <div class="progress-wrap">
+                        <div class="progress-container">
+                            <div class="progress-bar bg-blue progress-animate" data-width="0%"></div>
+                        </div>
+                        <div class="progress-stats">
+                            <span>Not Started</span>
+                            <span>0 / 75</span>
+                        </div>
+                    </div>
+
+                    <div class="card-action">
+                        Review List <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </div>
+                </a>
+
+                <a href="#" class="roadmap-card animate-on-scroll delay-200">
+                    <div class="card-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                            <line x1="8" y1="21" x2="16" y2="21"></line>
+                            <line x1="12" y1="17" x2="12" y2="21"></line>
+                        </svg>
+                    </div>
+                    <h3>System Design</h3>
+                    <p>Learn to design large-scale distributed systems effectively.</p>
+
+                    <div class="progress-wrap">
+                        <div class="progress-container">
+                            <div class="progress-bar bg-pink progress-animate" data-width="0%"></div>
+                        </div>
+                        <div class="progress-stats">
+                            <span>Start</span>
+                            <span>0 / 24</span>
+                        </div>
+                    </div>
+
+                    <div class="card-action">
+                        Start Learning <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-box animate-on-scroll">
+                <h2>Ready to <span class="text-gradient">level up?</span></h2>
+                <p>Join over a million developers who have aced their interviews using NeetCode's structured learning
+                    paths and intuitive explanations.</p>
+                <a href="#" class="btn btn-primary" style="padding: 1rem 2rem; font-size: 1.1rem;">Join our Discord</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="logoGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#6366f1" />
+                                    <stop offset="100%" stop-color="#a855f7" />
+                                </linearGradient>
+                            </defs>
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="none"
+                                fill="url(#logoGradient2)" />
+                        </svg>
+                        NeetCode
+                    </a>
+                    <p>The easiest, most efficient way to prepare for software engineering interviews.</p>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Features</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Algorithms</a></li>
+                        <li><a href="#">System Design</a></li>
+                        <li><a href="#">Mock Interviews</a></li>
+                        <li><a href="#">Study Groups</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Discord Server</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 NeetCode Reimagined. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z">
+                            </path>
+                        </svg></a>
+                    <a href="#"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg></a>
+                    <a href="#"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                            </path>
+                        </svg></a>
+                    <a href="#"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+                            </path>
+                            <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                        </svg></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
